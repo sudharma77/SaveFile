@@ -2,3 +2,26 @@ Hello bro
 Hello singh
 
 It should be noticed that instead of signing data directly by signing algorithm, usually a hash of data is created. Since the hash of data is a unique representation of data, it is sufficient to sign the hash in place of data. The most important reason of using hash instead of data directly for signing is efficiency of the scheme.
+
+##Java credential to use:
+
+spring.datasource.url=jdbc:mysql://localhost:3306/mydb
+spring.datasource.username=username
+spring.datasource.password=password
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.jpa.hibernate.ddl-auto=update 
+
+#define table
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
+public class Employee {
+    @Id
+    private Long id;
+    private String firstName;
+    private String lastName;
+    // Other fields, getters, setters, constructors, etc.
+}
+
